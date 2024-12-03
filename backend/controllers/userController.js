@@ -247,8 +247,8 @@ const paymentStripe = async(req,res) => {
       },
     ],
     customer: customer.id, // Link the customer to the checkout session
-    success_url: `http://localhost:5173/my-appointments`,//payment success, redirect to success_url - ${origin}/verify?success=true&appointmentId=${appointmentId._id}
-    cancel_url: `http://localhost:5173/cancel`,//payment fail, redirect to cancel_url - ${origin}/verify?success=false&appointmentId=${appointmentId._id}
+    success_url: `https://mern-doctor-appointment-frontend.onrender.com/my-appointments`,//payment success, redirect to success_url - ${origin}/verify?success=true&appointmentId=${appointmentId._id}
+    cancel_url: `https://mern-doctor-appointment-frontend.onrender.com/cancel`,//payment fail, redirect to cancel_url - ${origin}/verify?success=false&appointmentId=${appointmentId._id}
   })
  // console.log(session)
  await appointmentModel.findByIdAndUpdate(appointmentId,{payment:true})
