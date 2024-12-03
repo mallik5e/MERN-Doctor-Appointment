@@ -6,7 +6,8 @@ import { toast } from 'react-toastify'
 const MyAppointments = () => {
   const {backendUrl,token,getDoctorsData} = useContext(AppContext)
   const [appointments,setAppointments] = useState([])
-  const months = ["","Jan","Feb","Mar","Apr","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+  const months = ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
 
   const slotDateFormat = (slotDate) => {
     const dateArray = slotDate.split('_')
